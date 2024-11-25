@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- link to bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- link to font boostrap icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- link to css -->
+  <link rel="stylesheet" href="/main-folder/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .banner {
+    background: url('https://plus.unsplash.com/premium_photo-1683758342945-e0e47a14a66d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+    .banner h1 {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    
+@media  screen and (min-width:320px) and (max-width:575px) {
+  .footer{
+  
+    
+  }
+  
+}
+@media  screen and (min-width:768px) and (max-width:991px) {
+  .footer{
+    margin-top: 660px;
+  
+  }
+  
+}
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="my-website">
+      <h2>My Website</h2>
+    </div>
+    
+    <div class="menu-icon" onclick="toggleMenu()">
+      &#9776; <!-- Hamburger icon -->
+    </div>
+    <div class="items">
+      <ul type="none">
+        <li><a class="menu " href="/main-folder/index.html">Home</a></li>
+        <li><a class="menu " href="/tiny-folder/products.html">Product</a></li>
+        <li><a class="menu active" href="/tiny-folder/service.html">Service</a></li>
+        <li><a class="menu " href="/tiny-folder/contact.html">Contact</a></li>
+      </ul>
+      <input type="text" placeholder="Search product here...">
+
+    </div>
+
+  </header>
+  <section>
+    <div class="container">
+      
+
+
+      <!-- service page start  and ber page mean class active vea display:block-->
+      <div page="service" class="service-page page active ">
+
+        <!-- Banner Section -->
+        <div class="banner">
+          <h1>Our Services</h1>
+        </div>
+
+        <!-- Services Section -->
+        <div class="container my-5">
+          <h2 class="text-center mb-4">What We Offer</h2>
+          <div class="row g-4">
+            <!-- Service Card 1 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?s=2048x2048&w=is&k=20&c=k0HGlKZDGIpAIQCx4RUEjdT-KlPoPx5iJyU6QQt9O-8=" class="card-img-top" alt="Service 1">
+                <div class="card-body">
+                  <h5 class="card-title">Web Development</h5>
+                  <p class="card-text">We create stunning websites tailored to your needs, from simple static pages to
+                    dynamic web applications.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Service 2">
+                <div class="card-body">
+                  <h5 class="card-title">Mobile App Development</h5>
+                  <p class="card-text">Our team develops feature-rich and user-friendly mobile applications for both
+                    Android and iOS platforms.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Service 3">
+                <div class="card-body">
+                  <h5 class="card-title">Digital Marketing</h5>
+                  <p class="card-text">Boost your online presence with our digital marketing services, including SEO,
+                    social media, and PPC campaigns.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-4">
+            <!-- Service Card 4 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://media.istockphoto.com/id/1330168130/photo/engineer-meeting-for-an-architectural-project-working-with-partner-and-engineering-tools.jpg?s=2048x2048&w=is&k=20&c=ybz3FI5k7AH2RJ01GPo2uVE96RpYp_CPCbH7GC0XXuU=" class="card-img-top" alt="Service 4">
+                <div class="card-body">
+                  <h5 class="card-title">Graphic Design</h5>
+                  <p class="card-text">Get creative and impactful designs for logos, branding, and promotional materials
+                    with our expert graphic designers.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 5 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://plus.unsplash.com/premium_photo-1683141114059-aaeaf635dc05?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Service 5">
+                <div class="card-body">
+                  <h5 class="card-title">Cloud Solutions</h5>
+                  <p class="card-text">Leverage the power of cloud computing for scalable, secure, and efficient
+                    solutions for your business.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 6 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://plus.unsplash.com/premium_photo-1678566153919-86c4ba4216f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Service 6">
+                <div class="card-body">
+                  <h5 class="card-title">IT Consulting</h5>
+                  <p class="card-text">Our experts provide IT strategies and consulting services to help you achieve
+                    your business goals.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://media.istockphoto.com/id/1330168130/photo/engineer-meeting-for-an-architectural-project-working-with-partner-and-engineering-tools.jpg?s=2048x2048&w=is&k=20&c=ybz3FI5k7AH2RJ01GPo2uVE96RpYp_CPCbH7GC0XXuU=" class="card-img-top" alt="Service 4">
+                <div class="card-body">
+                  <h5 class="card-title">Graphic Design</h5>
+                  <p class="card-text">Get creative and impactful designs for logos, branding, and promotional materials
+                    with our expert graphic designers.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 5 -->
+            <div class="col-md-4">
+              <div class="card service-card">
+                <img src="https://plus.unsplash.com/premium_photo-1683141114059-aaeaf635dc05?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Service 5">
+                <div class="card-body">
+                  <h5 class="card-title">Cloud Solutions</h5>
+                  <p class="card-text">Leverage the power of cloud computing for scalable, secure, and efficient
+                    solutions for your business.</p>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 6 -->
+           
+          </div>
+        </div>
+
+       
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
+      <!-- service page end -->
+       
+
+
+    </div>
+   
+
+
+  </section>
+  <!-- Footer Section -->
+     <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+
+
+  <script src="/javaScript/index.js"></script>
+
+</body>
+
+</html>
+

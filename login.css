@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bg-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/image/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Blurs the background image */
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Adds a 50% opacity black overlay */
+    z-index: -1;
+}
+
+.content {
+    z-index: 1;
+    /* Other styling for the main content */
+}
+
+.card {
+    width: 100%;
+    max-width: 400px; /* Limit card width for better design */
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.card-text input[type="text"],input[type="password"]{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.card-text input[type="text"]:focus {
+    border-color: #6c63ff; /* Adds a highlight on focus */
+}
+
+.card a {
+    
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #5753c9;
+}
+/* Container for input fields with icons */
+.input-icon {
+    position: relative;
+}
+
+/* Styling for input fields */
+.input-icon input {
+    padding-right: 2.5rem; /* Adds space for the icon on the right */
+}
+
+/* Styling for the icons inside the input fields */
+.input-icon .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 1.2rem;
+    cursor: pointer; /* Optional: Add cursor pointer for better UX */
+}
+
+@media screen and (min-width:320px) and (max-width:575px){
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .bg-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/image/login.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: blur(2px); /* Blurs the background image */
+        z-index: -2;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Adds a 50% opacity black overlay */
+        z-index: -1;
+    }
+    
+    .content {
+        z-index: 1;
+        /* Other styling for the main content */
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 400px; /* Limit card width for better design */
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card .card-body {
+        padding: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+        color: #333;
+    }
+    
+    .card-text label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 600;
+        color: #555;
+    }
+    
+    .card-text input[type="text"],input[type="password"]{
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    .card-text input[type="text"]:focus {
+        border-color: #6c63ff; /* Adds a highlight on focus */
+    }
+    
+    .card a {
+        
+        color: #6c63ff;
+        text-decoration: none;
+    }
+    
+    .card a:hover {
+        text-decoration: underline;
+    }
+    
+    .card input[type="checkbox"] {
+        margin-right: 0.5rem;
+    }
+    
+    .btn-primary {
+        background-color: #6c63ff;
+        border: none;
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 1.5rem;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .btn-primary:hover {
+        background-color: #5753c9;
+    }
+    /* Container for input fields with icons */
+    .input-icon {
+        position: relative;
+    }
+    
+    /* Styling for input fields */
+    .input-icon input {
+        padding-right: 2.5rem; /* Adds space for the icon on the right */
+    }
+    
+    /* Styling for the icons inside the input fields */
+    .input-icon .icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        font-size: 1.2rem;
+        cursor: pointer; /* Optional: Add cursor pointer for better UX */
+    }
+}
+

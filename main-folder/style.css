@@ -1,0 +1,670 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    
+  }
+  .box-blur{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    /* set to display none */
+    visibility: hidden;
+    transition: all 0.2s linear;
+  }
+  .box-blur.active{
+    visibility: visible;
+  }
+  .close_icon{
+    font-size: 28px;
+    margin-right: 10px;
+   
+  }
+  .close_icon:hover{
+    color: rgb(11, 11, 237);
+  }
+
+  .box-modal{
+    position: relative;
+    z-index: 100;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    width: 40%;
+    height: 650px;
+    background-color: #fff;
+    /* set it to display none first */
+    visibility: hidden;
+    transition: all 0.2s linear;
+  }
+  .box-modal.active{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+  }
+  .box-modal .title{
+    width: 100%;
+    height: 40px;
+    /* background-color: green; */
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .box-modal .title >h5{
+    margin-left: 10px;
+    font-size: 30px;
+  }
+  .box-modal .image-button >img{
+    width: 90%;
+    height: 90%;
+    margin-left: 30px;
+   
+  }
+  .box-modal .btn_buyNow{
+    margin-left: 230px;
+  }
+  
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1d0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .my-website{
+    width: 30%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .my-website h2 {
+    margin: 0;
+  }
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+  
+  /* .items{
+    width: 70%;
+    height: 100%;
+    background-color: blue; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  */
+  .items {
+    display: flex;
+    gap: 15px;
+  }
+  .items ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .items ul li {
+    margin: 0;
+  }
+  .items a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .search_product {
+    font-size: 18px;
+  }
+  .menu.active{
+    background-color: rgb(206, 251, 251);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .items ul{
+    display: flex;
+    margin-top: 10px;
+  }
+  .items ul li a{
+    text-decoration: none;
+    margin-right: 100px;
+  }
+  .items input{
+    padding: 5px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+  }
+  section{
+    width: 95%;
+    height: 500px;
+    /* background-color: aquamarine; */
+    margin: auto;
+  }
+  .home-page{
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .product{
+    width: 100%;
+    height: 100%;
+    display: none;
+  } .service-page{
+    width: 100%;
+    height: 100%;
+    display: none;
+  } .contact-page{
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .page.active{
+    display: block;
+  }
+  .card >img{
+    object-fit: cover;
+  }
+  .card .card-body .card-title{
+    font-weight: bold;
+   
+
+  }
+
+
+  /* footer */
+  footer{
+    margin-top: 2300px;
+  }
+  .footer {
+    width: 100%;
+    background-color: rgb(200, 215, 215);
+    padding: 20px 0;
+    position: absolute;
+    
+   
+}
+.footer .row {
+    width: 100%;
+    height: 100%;
+    
+}
+.footer .header-footer2{
+  margin-top: 30px;
+  
+}
+.footer .header-footer2 .icon{
+  margin-top: 50px;
+  
+}
+.footer .header-footer2 .icon a{
+  text-decoration: none;
+  color: #333;
+  
+}
+.footer .img_and_detail {
+    display: flex;
+}
+
+.footer .block_2>a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #333;
+    /* display: block; */
+}
+.footer .block_2 img {
+    width: 0px;
+    /* margin-top: 10px; */
+}
+
+.footer .block_2 h3 {
+    margin: 25px 10px;
+}
+.footer .block_2 .icon {
+    font-size: 26px;
+    margin-top: 15px;
+}
+.footer .block_2 .icon a {
+    margin-left: 3px;
+    color: #fff;
+}
+.footer .header-footer {
+    margin: 30px 10px;
+}
+
+.footer .header-footer .icon {
+    margin-top: 5px;
+}
+
+.footer .header-footer .icon>a {
+    text-decoration: none;
+    color: rgb(37, 35, 35);
+}
+.footer p {
+    margin-left: 300px;
+    color: rgb(105, 101, 101);
+}
+.footer .s{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+}
+/* for heart-icon */
+.heart-icon{
+  color: red;
+}
+/* result not fund */
+.no-result-message {
+  text-align: center;
+  font-size: 1.5em;
+  color: #888;
+  margin-top: 100px;
+  
+}
+
+
+/* CSS Responsive for md screen */
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+  header .my-website{
+    display: none;
+    
+  }
+  header h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+  }
+
+  .menu-bar {
+      gap: 10px;
+  }
+
+  .menu-bar a {
+      font-size: 25px;
+  }
+
+  .search-bar input[type="text"] {
+      font-size: 18px;
+  }
+  
+  .card .card-body .card-title{
+    font-size: 16px;
+    font-weight: bold;
+    
+
+  }
+  .card .card-body .card-text{
+    font-size: 15.5px;
+  }
+
+  .box-modal .title{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  }
+  .imgShow{
+   margin: 16px 18px;
+  }
+  .box-modal .title .card-title,.close_icon{
+    font-size: 28px;
+  }
+ 
+  .box-modal{
+    width: 70%;
+    height: 75%;
+   
+  }
+  .box-modal .image-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box-modal .image-button > img {
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+  
+  .box-modal .btn_buyNow {
+    margin: 0;
+    display: block;
+    width: auto;
+    align-self: center;
+    padding: 20px 30px;
+    font-size: 23px;
+  }
+  footer{
+    margin-top: 3000px;
+   
+  }
+  .footer {
+    padding: 40px 0;
+   
+}
+
+.footer .block_2 h3 {
+    font-size: 20px;
+   
+
+}
+.footer .row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+
+}
+.footer .row .header-footer{
+  margin-top: -80px;
+ 
+}
+
+.footer .block_2>a {
+    font-size: 17px;
+    color: rgb(62, 60, 60);
+}
+
+.footer .block_2 img {
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+   
+}
+
+.footer {
+    margin-left: 10px;
+}
+
+.footer .response-footer {
+    margin-left: -20px;
+}
+
+.footer .header-footer h6 {
+    font-size: 20px;
+}
+.footer .header-footer2 {
+  font-size: 17px;
+}
+.footer .header-footer2 >h6{
+  font-size: 23px;
+  margin-top: -9px;
+}
+.footer .header-footer2 .icon a {
+  text-decoration: none;
+  color: rgb(62, 60, 60);
+}
+
+/* footer para */
+.footer .para{
+    font-size: 16px;
+    margin-left: 30px;
+    
+   
+}
+.footer .s{
+  font-size: 16px;
+  margin-left: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+ 
+} 
+
+/* end of CSS Responsive for md screen */
+
+/* end of CSS Responsive for sm screen */
+@media screen and (min-width:576px) and (max-width:767px){
+  header .my-website{
+    display: none;
+  }
+  .card{
+    width: 100%;
+    margin: 0 230px;
+    
+  }
+  .card .card-body .card-title{
+    font-size: 14px;
+    font-weight: bold;
+   
+
+  }
+  .card .card-body .card-text{
+    font-size: 14px;
+  }
+  footer{
+    margin-top: 4400px;
+    
+    
+  }
+  .footer .block_2 img {
+    width: 50px;
+}
+
+.footer .block_2 h3 {
+    font-size: 16px;
+}
+
+.footer .block_2>a {
+    font-size: 13px;
+}
+
+.footer .header-footer h6 {
+    font-size: 14px;
+}
+
+/* footer para */
+.footer p {
+    font-size: 10px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+}
+/* end of CSS Responsive for sm screen */
+
+
+/* end of CSS Responsive for xs screen */
+ @media screen and (min-width:320px) and (max-width:575px){
+  header .my-website h2{
+   
+  }
+  .items {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    background-color: #d2c4c4;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 230px;
+    transition:  1s ease;
+    transform-style: preserve-3d;
+
+   
+  }
+
+
+  .items ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .items ul li {
+    margin: 5px 0;
+  }
+  .items input{
+    width: 200px;
+    margin: 0 auto;
+    font-size: 12px;
+   
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+  .card_parent{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card .card-body .card-title{
+    font-size: 14px;
+  }
+  .card .card-body .card-text{
+    display: none;
+  }
+  .box-modal .title{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+  }
+  .imgShow{
+   margin: 20px 18px;
+  }
+  .box-modal .title .card-title,.close_icon{
+    font-size: 18px;
+  }
+  .box-modal.image-button a.btn_buyNow{
+  
+  }
+  .box-modal{
+    width: 70%;
+    height: 60%;
+   
+  }
+  .box-modal .image-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box-modal .image-button > img {
+    width: 100%; /* Adjust width as needed */
+    margin-bottom: 10px; /* Space between image and button */
+  }
+  
+  .box-modal .btn_buyNow {
+    margin: 0;
+    display: block;
+    width: auto;
+    align-self: center;
+  }
+  footer{
+    margin-top:2750px;
+    object-fit: cover;
+    overflow-x: hidden;
+    
+   
+  }
+  .footer{
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .footer .response-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow-x: hidden;
+}
+.footer .response-footer a{
+  line-height: 10px;
+}
+.footer .response-footer .header-footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  margin: auto;
+}
+.footer .response-footer .header-footer2 .icon a{
+  text-decoration: none;
+  color: black;
+  line-height: 10px;
+ 
+  
+  
+}
+.footer .response-footer .header-footer2 h6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 10px;
+  
+  
+}
+.footer .response-footer .header-footer2 .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.footer .response-footer .img_and_detail{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   line-height: 10px;
+}
+.footer .response-footer .img_and_detail >img{
+   line-height: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.footer p  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: small;
+    margin:0 10px;
+}
+}
+
+/* end of CSS Responsive for xs screen */
+

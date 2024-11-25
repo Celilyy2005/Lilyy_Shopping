@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login accout first..!!</title>
+    <link rel="stylesheet" href="login.css">
+     <!-- link to bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <!-- link to font boostrap icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <!-- link to css -->
+</head>
+<body >
+    <div class="bg-cover"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="card mt-5" style="width: 32rem;">
+            <div class="card-body">
+                <h5 class="card-title mb-5 text-center">Login</h5>
+                
+                <!-- Email input with icon on the right -->
+                <div class="mb-3 position-relative">
+                    <label for="email">Email</label>
+                    <div class="input-icon">
+                        <input type="text" id="email" placeholder="Enter your email" class="form-control">
+                        <i class="bi bi-person-fill icon"></i> <!-- Profile icon on the right -->
+                        <small id="emailError" class="text-danger"></small>
+                    </div>
+                </div>
+                
+                <!-- Password input with toggle icon on the right -->
+                <div class="mb-3 position-relative">
+                    <label for="password">Password</label>
+                    <div class="input-icon">
+                        <input type="password" id="password" placeholder="Enter your password" class="form-control">
+                        <i class="bi bi-eye-slash icon" id="togglePassword" style="cursor: pointer;"></i>
+                        <small id="passwordError" class="text-danger"></small>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <p>Don't have an account? <a href="/login/register.html">Register here</a></p>
+                    <a href="#">Forgot password?</a>
+                    <div class="mt-3">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4"  id="loginButton">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Toggle Password Visibility
+        document.querySelector("#togglePassword").addEventListener("click", function () {
+            const password = document.querySelector("#password");
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            this.classList.toggle("bi-eye");
+            this.classList.toggle("bi-eye-slash");
+        });
+
+        document.querySelector("#loginButton").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Input values
+    const email = document.querySelector("#email").value.trim();
+    const password = document.querySelector("#password").value.trim();
+    const emailError = document.querySelector("#emailError");
+    const passwordError = document.querySelector("#passwordError");
+
+    // Clear error messages
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    // Validate inputs
+    let isValid = true;
+    if (email === "") {
+        emailError.textContent = "Email is required.";
+        isValid = false;
+    }
+
+    if (password === "") {
+        passwordError.textContent = "Password is required.";
+        isValid = false;
+    }
+
+    if (!isValid) return;
+
+    // Fetch registered user data
+    const registeredUser = JSON.parse(localStorage.getItem("registeredUser")); // Replace 'registeredUser' with your registration storage key.
+
+    // Check if user exists and password matches
+    if (registeredUser && registeredUser.email === email && registeredUser.password === password) {
+        // Store login state
+        const user = { email: email }; // You can store additional user details if needed
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        localStorage.setItem("isLoggedIn", "true");
+
+        // Redirect to main page
+        window.location.href = "/main-folder/index.html";
+    } else {
+        // Show error if login fails
+        emailError.textContent = "Invalid email or password.";
+    }
+});
+
+    </script>
+    
+    
+</body>
+</html>
