@@ -41,7 +41,7 @@
                 </div>
                 
                 <div class="form-actions">
-                    <p>Don't have an account? <a href="/login/register.html">Register here</a></p>
+                    <p>Don't have an account? <a href="login/register.html">Register here</a></p>
                     <a href="#">Forgot password?</a>
                     <div class="mt-3">
                         <input type="checkbox" id="remember">
@@ -101,7 +101,7 @@
         localStorage.setItem("isLoggedIn", "true");
 
         // Redirect to main page
-        window.location.href = "/main-folder/index.html";
+        window.location.href = "main-folder/index.html";
     } else {
         // Show error if login fails
         emailError.textContent = "Invalid email or password.";
